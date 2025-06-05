@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"frontend-service","namespace":"default"},"spec":{"ports":[{"port":80,"protoco:"TCP","targetPort":8080}],"selector":{"app":"frontend-serivce"},"type":"LoadBalancer"}}
+  creationTimestamp: "2025-05-29T19:58:16Z"
+  name: frontend-service
+  namespace: default
+  resourceVersion: "164145"
+  uid: 40a0a3b2-6c16-42c4-bc38-49fb2d92a031
+spec:
+  allocateLoadBalancerNodePorts: true
+  clusterIP: 10.100.199.11
+  clusterIPs:
+  - 10.100.199.11
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  loadBalancerClass: eks.amazonaws.com/nlb
+  ports:
+  - nodePort: 30987
+    port: 80
+    protocol: TCP
