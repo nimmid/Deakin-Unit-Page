@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     environment {
-        DIRECTORY_PATH = "C:\\nimmi personal\\Deakin\\Study Material\\SIT 753\\Week 4\\Deakin-Unit-Page"
+        DIRECTORY_PATH = "C:\\hashim personal\\Deakin\\Study Material\\SIT 753\\Week 4\\Deakin-Unit-Page"
         TESTING_ENVIRONMENT = "nextjs-app-testing-environment"
-        PRODUCTION_ENVIRONMENT = "nimmi_nextjs-app-production-environment"
+        PRODUCTION_ENVIRONMENT = "hashim_nextjs-app-production-environment"
         JENKINS_LOG_PATH="C:\\ProgramData\\Jenkins\\.jenkins\\jobs\\Github-Jenkins-pipeline\\builds\\21\\log"
     }
     
@@ -63,14 +63,14 @@ pipeline {
         success{
             emailext body:'Pipeline succeeded. All stages complted.',
                      subject: 'Pipeline status: Successful',
-                     to:'nimmid6@gmail.com',
+                     to:'hashimplay1@gmail.com',
                      attachmentsPattern: '/*.log'
         }
 
         failure{
             emailext body:'Pipeline failed. Check logs for detail',
                      subject: 'Pipeline status: Failure',
-                     to:'nimmid6.com',
+                     to:'hashimplay1@gmail.com',
                      attachmentsPattern: '/*.log'
         }
     }
